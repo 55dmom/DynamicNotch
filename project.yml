@@ -1,0 +1,31 @@
+name: DynamicNotch
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: "18.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+targets:
+  DynamicNotch:
+    type: application
+    platform: iOS
+    sources:
+      - path: .
+        includes:
+          - "*.swift"
+    info:
+      path: Info.plist
+      properties:
+        CFBundleDisplayName: Dynamic Notch
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        NSMicrophoneUsageDescription: يستخدم التطبيق الميكروفون لعرض موجة الصوت في النوتش.
+        NSAppleMusicUsageDescription: يستخدم التطبيق مكتبة الموسيقى لعرض الأغنية الحالية في النوتش.
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.dynamicnotch
+        TARGETED_DEVICE_FAMILY: "1"
